@@ -1,4 +1,5 @@
 import React from 'react'
+import '../style/TodoInput.sass'
 
 export default class TodoInput extends React.Component {
   state = {
@@ -10,19 +11,24 @@ export default class TodoInput extends React.Component {
     })
   }
 
-  onClick=()=>{
-    if(this.state.text && this.props.onAdd){
+  add = () => {
+    if (this.state.text && this.props.onAdd) {
       this.props.onAdd(this.state.text)
-      this.setState({text: ''})
+      this.setState({ text: '' })
+    }
+  }
+
+  onKeyUp = (e) => {
+    if (e.keyCode === 13) {
+      this.add()
     }
   }
 
   render() {
     return (
-      <div>
-        <input onChange={this.onChange} value={this.state.text}/>
-        <br/>
-        <button onClick={this.onClick}>add</button>
+      <div className="input-wrapper">
+        <input onChange={this.onChange} value={this.state.text} onKeyUp={this.onKeyUp} />
+        <button onClick={this.add}>add</button>
       </div>
     )
   }
