@@ -1,5 +1,5 @@
 import React from 'react'
-import '../style/TodoInput.sass'
+import '../style/TodoInput.scss'
 
 export default class TodoInput extends React.Component {
   state = {
@@ -27,8 +27,13 @@ export default class TodoInput extends React.Component {
   render() {
     return (
       <div className="input-wrapper">
-        <input onChange={this.onChange} value={this.state.text} onKeyUp={this.onKeyUp} />
-        <button onClick={this.add}>add</button>
+        <input 
+          className="input"
+          onChange={this.onChange}
+          value={this.state.text}
+          onKeyUp={this.onKeyUp}
+        />
+        <button className="add" onClick={this.add}>add</button>
       </div>
     )
   }
