@@ -2,7 +2,7 @@ import React from 'react'
 import TodoInput from './TodoInput'
 import TodoList from './TodoList'
 import TodoFilter from './TodoFilter'
-import '../style/TodoApp.scss'
+import '../style/TodoApp.less'
 
 export default class TodoApp extends React.Component {
   render() {
