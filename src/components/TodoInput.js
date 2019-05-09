@@ -1,5 +1,4 @@
 import React from 'react'
-import '../style/TodoInput.scss'
 
 export default class TodoInput extends React.Component {
   state = {

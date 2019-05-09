@@ -9,7 +9,7 @@ export default class TodoApp extends React.Component {
     return (
       <div className="todoApp">
         <header>
-          <div>
+          <div className="header-wrap">
             <TodoInput />
             <TodoFilter />
           </div>
